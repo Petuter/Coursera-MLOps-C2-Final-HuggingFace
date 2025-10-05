@@ -3,12 +3,12 @@ import gradio as gr
 
 
 #uncomment to download model
-#from transformers import pipeline
-#model = pipeline(
-#    "summarization",
-#    model="sshleifer/distilbart-cnn-12-6",
-#    revision="a4f8f3e",
-#)
+from transformers import pipeline
+model = pipeline(
+    "summarization",
+    model="sshleifer/distilbart-cnn-12-6",
+    revision="a4f8f3e",
+)
 
 #load model and tokenizer from disk
 model = AutoModelForSeq2SeqLM.from_pretrained("summarizeApp")
